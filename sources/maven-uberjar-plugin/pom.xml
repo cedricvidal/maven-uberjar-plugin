@@ -3,7 +3,7 @@
 
 	<groupId>biz.vidal.maven</groupId>
 	<artifactId>maven-uberjar-plugin</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<packaging>maven-plugin</packaging>
 
 	<name>Maven Uberjar Plugin</name>
@@ -26,7 +26,7 @@
 		<developerConnection>scm:git:ssh://git@github.com/cedricvidal/maven-uberjar-plugin.git</developerConnection>
 		<connection>scm:git:ssh://git@github.com/cedricvidal/maven-uberjar-plugin.git</connection>
 		<url>git:ssh://git@github.com/cedricvidal/maven-uberjar-plugin.git</url>
-		<tag>maven-uberjar-plugin-0.0.1</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<distributionManagement>
 		<downloadUrl>https://github.com/cedricvidal/maven-uberjar-plugin</downloadUrl>
