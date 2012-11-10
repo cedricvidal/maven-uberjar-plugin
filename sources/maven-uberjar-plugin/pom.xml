@@ -23,6 +23,26 @@
 		<shrinkwrap.uberjar.version>0.0.4</shrinkwrap.uberjar.version>
 	</properties>
 
+	<scm>
+		<developerConnection>scm:git:ssh://git@github.com/cedricvidal/maven-uberjar-plugin.git</developerConnection>
+		<connection>scm:git:ssh://git@github.com/cedricvidal/maven-uberjar-plugin.git</connection>
+		<url>git:ssh://git@github.com/cedricvidal/maven-uberjar-plugin.git</url>
+		<tag>HEAD</tag>
+	</scm>
+	<distributionManagement>
+		<downloadUrl>https://github.com/cedricvidal/maven-uberjar-plugin</downloadUrl>
+		<repository>
+			<id>cedricvidal-cloudbees-release</id>
+			<name>cedricvidal-cloudbees-release</name>
+			<url>dav:https://repository-cedricvidal.forge.cloudbees.com/release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>cedricvidal-cloudbees-snapshot</id>
+			<name>cedricvidal-cloudbees-snapshot</name>
+			<url>dav:https://repository-cedricvidal.forge.cloudbees.com/snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<repositories>
 		<repository>
 			<id>cedricvidal-cloudbees-snapshot</id>
@@ -128,7 +148,22 @@
 						<ignoreNonCompile>true</ignoreNonCompile>
 					</configuration>
 				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.5.1</version>
+				</plugin>
+				<plugin>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.3.2</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
 	</build>
 </project>

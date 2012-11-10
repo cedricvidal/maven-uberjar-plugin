@@ -1,14 +1,7 @@
 Maven 2 Uberjar Plugin
 ----------------------
 
-This is a Maven 2 Uberjar Plugin which creates uberjars using the [Classworkds Uberjarring](http://classworlds.codehaus.org/uberjar.html) technic. It builds the uberjar with the [Shrinkwrap Uberjar](https://github.com/cedricvidal/shrinkwrap-uberjar) library.
-
-# Building from sources
-
-	$ git clone git://github.com/cedricvidal/maven-uberjar-plugin.git
-	$ cd maven-uberjar-plugin
-	$ cd sources
-	$ mvn install
+This is a Maven 2 Uberjar Plugin which creates uberjars using the [Classworlds Uberjarring](http://classworlds.codehaus.org/uberjar.html) technic. It builds the uberjar with the [Shrinkwrap Uberjar](https://github.com/cedricvidal/shrinkwrap-uberjar) library.
 
 # Usage
 
@@ -67,6 +60,13 @@ If you want your uberjar to run using a different classworlds version:
 	<configuration>
 		<classifier>uber</classifier>
 	</configuration>
+
+# Building from sources
+
+	$ git clone git://github.com/cedricvidal/maven-uberjar-plugin.git
+	$ cd maven-uberjar-plugin
+	$ cd sources
+	$ mvn install
 
 # About uberjarring
 
