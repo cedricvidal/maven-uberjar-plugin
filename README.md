@@ -3,6 +3,8 @@ Maven 2 Uberjar Plugin
 
 This is a Maven 2 Uberjar Plugin which creates uberjars using the [Classworlds Uberjarring](http://classworlds.codehaus.org/uberjar.html) technic. It builds the uberjar with the [Shrinkwrap Uberjar](https://github.com/cedricvidal/shrinkwrap-uberjar) library.
 
+[![Build Status](https://cedricvidal.ci.cloudbees.com/job/shrinkwrap-uberjar/badge/icon)](https://cedricvidal.ci.cloudbees.com/job/shrinkwrap-uberjar/)
+
 # Usage
 
 #### Add the following Maven repository to your pom.xml
@@ -75,3 +77,5 @@ http://classworlds.codehaus.org/uberjar.html
 
 Cedric Vidal
 http://blog.proxiad.com
+
+[![Build on Cloudbees](http://web-static-cloudfront.s3.amazonaws.com/images/badges/BuiltOnDEV.png)](https://cedricvidal.ci.cloudbees.com/)
