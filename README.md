@@ -7,7 +7,28 @@ This is a Maven 2 Uberjar Plugin which creates uberjars using the [Classworlds U
 
 # Usage
 
-#### Add the following Maven repository to your pom.xml
+#### Simply add the plugin to your project with the default configuration
+
+This configuration will create an uberjar that when executed using java -jar will run the com.foo.bar.SampleApp:
+
+	<plugin>
+		<groupId>biz.vidal.maven</groupId>
+		<artifactId>maven-uberjar-plugin</artifactId>
+		<version>0.0.1</version>
+		<configuration>
+			<mainClass>com.foo.bar.SampleApp</mainClass>
+		</configuration>
+		<executions>
+			<execution>
+				<phase>package</phase>
+				<goals>
+					<goal>uberjar</goal>
+				</goals>
+			</execution>
+		</executions>
+	</plugin>
+
+#### Don't forget to also declare the Maven repository the plugin is deployed in:
 
 	<repository>
 		<id>cedricvidal-cloudbees-release</id>
@@ -21,28 +42,17 @@ This is a Maven 2 Uberjar Plugin which creates uberjars using the [Classworlds U
 		</snapshots>
 	</repository>
 
-#### Add the plugin to your project
+# Attaching the uberjar using a classifier
 
-	<plugin>
-		<groupId>biz.vidal.maven</groupId>
-		<artifactId>maven-uberjar-plugin</artifactId>
-		<version>0.0.1</version>
-		<configuration>
-			<mainClass>test.SampleApp</mainClass>
-		</configuration>
-		<executions>
-			<execution>
-				<phase>package</phase>
-				<goals>
-					<goal>uberjar</goal>
-				</goals>
-			</execution>
-		</executions>
-	</plugin>
+By default, the uberjar will be the default artifact of the maven project but if you specify a classifier, then your uberjar will instead be attached to the project:
+
+	<configuration>
+		<classifier>uber</classifier>
+	</configuration>
 
 # Using different classworld and classworlds-boot artifacts
 
-If you want your uberjar to run using a different classworlds version:
+By default, your uberjar will be built to run using classworlds:classworlds:1.1 and classworlds:classworlds-boot:1.0 jars but if you want your uberjar to run using a different classworlds version:
 
 	<configuration>
 		<classworldsArtifact>
@@ -55,12 +65,6 @@ If you want your uberjar to run using a different classworlds version:
 			<artifactId>classworlds-boot</artifactId>
 			<version>1.0</version>
 		</classworldsBootArtifact>
-	</configuration>
-
-# Attaching the uberjar using a classifier
-
-	<configuration>
-		<classifier>uber</classifier>
 	</configuration>
 
 # Building from sources
