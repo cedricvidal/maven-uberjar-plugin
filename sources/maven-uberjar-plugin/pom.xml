@@ -20,6 +20,7 @@
 	<properties>
 		<mavenVersion>2.0.6</mavenVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<shrinkwrap.uberjar.version>0.0.4</shrinkwrap.uberjar.version>
 	</properties>
 
 	<repositories>
@@ -60,7 +61,7 @@
 		<dependency>
 			<groupId>biz.vidal.shrinkwrap</groupId>
 			<artifactId>shrinkwrap-uberjar-impl</artifactId>
-			<version>0.0.4</version>
+			<version>${shrinkwrap.uberjar.version}</version>
 			<type>jar</type>
 			<scope>runtime</scope>
 		</dependency>
@@ -68,7 +69,7 @@
 		<dependency>
 			<groupId>biz.vidal.shrinkwrap</groupId>
 			<artifactId>shrinkwrap-uberjar-api</artifactId>
-			<version>0.0.4</version>
+			<version>${shrinkwrap.uberjar.version}</version>
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
