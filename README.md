@@ -3,6 +3,32 @@ Maven 2 Uberjar Plugin
 
 This is a Maven 2 Uberjar Plugin which creates uberjars using the [Classworlds Uberjarring](http://classworlds.codehaus.org/uberjar.html) technic. It builds the uberjar with the [Shrinkwrap Uberjar](https://github.com/cedricvidal/shrinkwrap-uberjar) library.
 
+Content of the built uberjar
+
+	+-- uberjar.jar
+		+-- META-INF
+		¦   +-- MANIFEST.MF
+		+-- WORLDS-INF
+		¦   +-- classworlds.jar
+		¦   +-- conf
+		¦   ¦   +-- classworlds.conf
+		¦   +-- lib
+		¦       +-- my-app.jar
+		¦       +-- some-dependency.jar
+		¦       +-- another-dependency.jar
+		+-- org
+			+-- codehaus
+				+-- classworlds
+					+-- UrlUtils.class
+					+-- uberjar
+						+-- boot
+						¦   +-- Bootstrapper.class
+						¦   +-- InitialClassLoader.class
+						+-- protocol
+							+-- jar
+								+-- Handler.class
+								+-- JarUrlConnection.class
+
 [![Build Status](https://cedricvidal.ci.cloudbees.com/job/maven-uberjar-plugin/badge/icon)](https://cedricvidal.ci.cloudbees.com/job/maven-uberjar-plugin/)
 
 # Usage
